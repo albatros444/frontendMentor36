@@ -1,2 +1,17 @@
 @import "globals";
 @import "attribution";
+@import "topSection";
+@import "topGrid";
+@import "bottomGrid";
+
+.background {
+  padding-bottom: 80px;
+  ///grid top
+  .overviewTitle {
+    width: 1110px;
+    margin: 40px auto 20px;
+    font-size: 25px;
+    color: hsl(227, 9%, 44%); //custom
+  }
+  ////grid bottom
+}

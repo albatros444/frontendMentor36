@@ -1,0 +1,116 @@
+.bottomGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 30px;
+  width: 1110px;
+  margin: 0 auto;
+  .bottomGcard {
+    height: 125px;
+    padding: 25px;
+    border-radius: 4px;
+    background-color: hsl(227, 47%, 96%);
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      p {
+        font-weight: 700;
+        color: hsl(227, 10%, 34%);
+      }
+    }
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      .changeToday {
+        display: flex;
+        align-items: baseline;
+        img {
+          height: 6px;
+          padding-bottom: 2px;
+        }
+        p {
+          margin-left: 3px;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+      .number {
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+    &:nth-child(1) {
+      .bottomGcard__bottom {
+        .changeToday {
+          p {
+            color: hsl(163, 72%, 41%);
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      .bottomGcard__bottom {
+        .changeToday {
+          p {
+            color: hsl(356, 69%, 56%);
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      .bottomGcard__bottom {
+        .changeToday {
+          p {
+            color: hsl(163, 72%, 41%);
+          }
+        }
+      }
+    }
+    &:nth-child(4) {
+      .bottomGcard__bottom {
+        .changeToday {
+          p {
+            color: hsl(163, 72%, 41%);
+          }
+        }
+      }
+    }
+    &:nth-child(5) {
+      .bottomGcard__bottom {
+        .changeToday {
+          p {
+            color: hsl(163, 72%, 41%);
+          }
+        }
+      }
+    }
+    &:nth-child(6) {
+      .bottomGcard__bottom {
+        .changeToday {
+          p {
+            color: hsl(163, 72%, 41%);
+          }
+        }
+      }
+    }
+    &:nth-child(7) {
+      .bottomGcard__bottom {
+        .changeToday {
+          p {
+            color: hsl(356, 69%, 56%);
+          }
+        }
+      }
+    }
+    &:nth-child(8) {
+      .bottomGcard__bottom {
+        .changeToday {
+          p {
+            color: hsl(356, 69%, 56%);
+          }
+        }
+      }
+    }
+  }
+}
