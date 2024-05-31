@@ -12,7 +12,7 @@
     position: relative;
     border-radius: 4px;
     overflow: hidden;
-    background-color: hsl(227, 47%, 96%);
+    background-color: var(--cardBgLight);
     .topStripe {
       display: block;
       position: absolute;
@@ -27,13 +27,13 @@
       align-items: center;
       margin-top: 40px;
       margin-bottom: 20px;
-      img {
-      }
+      // img {
+      // }
       p {
         margin-left: 8px;
         font-size: 12px;
         font-weight: 600;
-        color: hsl(227, 10%, 34%); //custom
+        color: var(--grayTextLight);
       }
     }
     .followers {
@@ -41,13 +41,14 @@
       p:nth-child(1) {
         font-size: 55px;
         font-weight: 700;
+        color: var(--textLight);
       }
       p:nth-child(2) {
         font-size: 12px;
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 5px;
-        color: hsl(227, 10%, 34%); //custom
+        color: var(--grayTextLight);
       }
     }
     .changeToday {

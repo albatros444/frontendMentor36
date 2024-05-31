@@ -69,9 +69,12 @@ ul {
   margin: 0 auto;
   padding: 40px;
 }
+.topSection__title h1 {
+  color: var(--textLight);
+}
 .topSection__title p {
   font-weight: 600;
-  color: hsl(227, 10%, 34%);
+  color: var(--grayTextLight);
 }
 .topSection__toggleButton {
   display: flex;
@@ -79,30 +82,30 @@ ul {
 }
 .topSection__toggleButton p {
   font-weight: 700;
-  color: hsl(231, 19%, 66%);
+  color: hsl(231, 19%, 63%);
 }
-.topSection__toggleButton .button {
+.topSection__toggleButton .darkModebutton {
   position: relative;
   display: inline-block;
   width: 48px;
   height: 24px;
   margin-left: 10px;
 }
-.topSection__toggleButton .button input {
+.topSection__toggleButton .darkModebutton input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-.topSection__toggleButton .button input:checked + .slider {
+.topSection__toggleButton .darkModebutton input:checked + .slider {
   background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
-.topSection__toggleButton .button input:checked + .slider::before {
+.topSection__toggleButton .darkModebutton input:checked + .slider::before {
   -webkit-transform: translateX(-24px);
   -ms-transform: translateX(-24px);
   transform: translateX(-24px);
   background-color: hsl(228, 28%, 20%);
 }
-.topSection__toggleButton .button .slider {
+.topSection__toggleButton .darkModebutton .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -114,7 +117,7 @@ ul {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-.topSection__toggleButton .button .slider::before {
+.topSection__toggleButton .darkModebutton .slider::before {
   position: absolute;
   content: "";
   height: 18px;
@@ -142,7 +145,7 @@ ul {
   position: relative;
   border-radius: 4px;
   overflow: hidden;
-  background-color: hsl(227, 47%, 96%);
+  background-color: var(--cardBgLight);
 }
 .topGrid .topGcard .topStripe {
   display: block;
@@ -163,7 +166,7 @@ ul {
   margin-left: 8px;
   font-size: 12px;
   font-weight: 600;
-  color: hsl(227, 10%, 34%);
+  color: var(--grayTextLight);
 }
 .topGrid .topGcard .followers {
   margin-bottom: 25px;
@@ -171,13 +174,14 @@ ul {
 .topGrid .topGcard .followers p:nth-child(1) {
   font-size: 55px;
   font-weight: 700;
+  color: var(--textLight);
 }
 .topGrid .topGcard .followers p:nth-child(2) {
   font-size: 12px;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 5px;
-  color: hsl(227, 10%, 34%);
+  color: var(--grayTextLight);
 }
 .topGrid .topGcard .changeToday {
   display: flex;
@@ -230,7 +234,7 @@ ul {
 }
 .bottomGrid .bottomGcard__top p {
   font-weight: 700;
-  color: hsl(227, 10%, 34%);
+  color: var(--grayTextLight);
 }
 .bottomGrid .bottomGcard__bottom {
   display: flex;
@@ -252,6 +256,7 @@ ul {
 .bottomGrid .bottomGcard__bottom .number {
   font-size: 30px;
   font-weight: 700;
+  color: var(--textLight);
 }
 .bottomGrid .bottomGcard:nth-child(1) .bottomGcard__bottom .changeToday p {
   color: hsl(163, 72%, 41%);
@@ -278,12 +283,26 @@ ul {
   color: hsl(356, 69%, 56%);
 }
 
+:root {
+  --bgLight: hsl(0, 0%, 100%);
+  --bgDark: hsl(230, 17%, 14%);
+  --topBgLight: hsl(225, 100%, 98%);
+  --topBgDark: hsl(232, 19%, 15%);
+  --cardBgLight: hsl(227, 47%, 96%);
+  --cardBgDark: hsl(228, 28%, 20%);
+  --textLight: hsl(230, 17%, 14%);
+  --textDark: hsl(0, 0%, 100%);
+  --grayTextLight: hsl(228, 12%, 44%);
+  --grayTextDark: hsl(228, 34%, 66%);
+}
+
 .background {
   position: relative;
   height: 100%;
   padding-bottom: 80px;
   max-width: 1440px;
   margin: 0 auto;
+  background-color: var(--bgLight);
 }
 .background:before {
   content: "";
@@ -294,8 +313,7 @@ ul {
   height: 240px;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  z-index: -50;
-  background-color: hsl(225, 100%, 98%);
+  background-color: var(--topBgLight);
 }
 .background .grids {
   padding: 0 40px;
@@ -304,7 +322,7 @@ ul {
   max-width: 1110px;
   margin: 40px auto 20px;
   font-size: 25px;
-  color: hsl(227, 9%, 44%);
+  color: var(--grayTextLight);
 }
 
 @media screen and (max-width: 1000px) and (min-width: 601px) {
@@ -330,9 +348,9 @@ ul {
     margin: 0 auto;
   }
   .background .topSection__title {
-    border-bottom: 1px solid black;
     padding-bottom: 20px;
     margin-bottom: 20px;
+    border-bottom: 1px solid hsl(228, 21%, 29%);
   }
   .background .topSection__title h1 {
     font-size: 23px;
@@ -343,6 +361,10 @@ ul {
   }
   .background .grids {
     padding: 0 25px;
+  }
+  .background .grids .overviewTitle {
+    width: 100%;
+    max-width: 400px;
   }
   .background .grids .topGrid {
     display: flex;
@@ -362,6 +384,48 @@ ul {
     max-width: 400px;
     margin: 0 auto;
   }
+}
+.darkMode {
+  background-color: var(--bgDark);
+}
+.darkMode .background {
+  background-color: var(--bgDark);
+}
+.darkMode .background:before {
+  background-color: var(--topBgDark);
+}
+.darkMode .background .topSection__title h1 {
+  color: var(--textDark);
+}
+.darkMode .background .topSection__title p {
+  color: var(--grayTextDark);
+}
+.darkMode .background .grids .overviewTitle {
+  color: var(--textDark);
+}
+.darkMode .background .grids .topGrid .topGcard {
+  background-color: var(--cardBgDark);
+}
+.darkMode .background .grids .topGrid .topGcard .nickName p {
+  color: var(--grayTextDark);
+}
+.darkMode .background .grids .topGrid .topGcard .followers p:nth-child(1) {
+  color: var(--textDark);
+}
+.darkMode .background .grids .topGrid .topGcard .followers p:nth-child(2) {
+  color: var(--grayTextDark);
+}
+.darkMode .background .grids .bottomGrid .bottomGcard {
+  background-color: var(--cardBgDark);
+}
+.darkMode .background .grids .bottomGrid .bottomGcard__top p {
+  color: var(--grayTextDark);
+}
+.darkMode .background .grids .bottomGrid .bottomGcard__bottom .number {
+  color: var(--textDark);
+}
+.darkMode .attribution {
+  color: gray;
 }
 
 /*# sourceMappingURL=main.css.map */

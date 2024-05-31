@@ -1,0 +1,63 @@
+.darkMode {
+  background-color: var(--bgDark);
+
+  .background {
+    background-color: var(--bgDark);
+    &:before {
+      background-color: var(--topBgDark);
+    }
+    .topSection {
+      &__title {
+        h1 {
+          color: var(--textDark); ///for dark mode, actually white
+        }
+        p {
+          color: var(--grayTextDark);
+        }
+      }
+      &__toggleButton {
+      }
+    }
+    .grids {
+      .overviewTitle {
+        color: var(--textDark);
+      }
+      .topGrid {
+        .topGcard {
+          background-color: var(--cardBgDark);
+          .nickName {
+            p {
+              color: var(--grayTextDark);
+            }
+          }
+          .followers {
+            p:nth-child(1) {
+              color: var(--textDark);
+            }
+            p:nth-child(2) {
+              color: var(--grayTextDark);
+            }
+          }
+        }
+      }
+      .bottomGrid {
+        .bottomGcard {
+          background-color: var(--cardBgDark);
+          &__top {
+            p {
+              color: var(--grayTextDark);
+            }
+          }
+          &__bottom {
+            .number {
+              color: var(--textDark);
+            }
+          }
+        }
+      }
+    }
+  }
+  .attribution {
+    color: gray;
+  }
+}

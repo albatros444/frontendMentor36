@@ -7,9 +7,12 @@
   margin: 0 auto;
   padding: 40px;
   &__title {
+    h1 {
+      color: var(--textLight);
+    }
     p {
       font-weight: 600;
-      color: hsl(227, 10%, 34%); ////custom
+      color: var(--grayTextLight);
     }
   }
   &__toggleButton {
@@ -17,9 +20,9 @@
     align-items: center;
     p {
       font-weight: 700;
-      color: hsl(231, 19%, 66%); ///custom
+      color: hsl(231, 19%, 63%); ///custom
     }
-    .button {
+    .darkModebutton {
       ////////button - label
       position: relative;
       display: inline-block;

@@ -14,6 +14,7 @@
     }
   }
 }
+
 @media screen and (max-width: 600px) {
   .background {
     .topSection {
@@ -24,9 +25,9 @@
       margin: 0 auto;
 
       &__title {
-        border-bottom: 1px solid black;
         padding-bottom: 20px;
         margin-bottom: 20px;
+        border-bottom: 1px solid hsl(228, 21%, 29%);
         h1 {
           font-size: 23px;
         }
@@ -38,6 +39,10 @@
     }
     .grids {
       padding: 0 25px;
+      .overviewTitle {
+        width: 100%;
+        max-width: 400px;
+      }
       .topGrid {
         display: flex;
         flex-direction: column;
