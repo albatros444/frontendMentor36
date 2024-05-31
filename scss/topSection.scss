@@ -19,6 +19,7 @@
   }
   &__toggleButton {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     p {
       padding-bottom: 2px;
@@ -38,8 +39,12 @@
         height: 0;
       }
       input:checked + .slider {
-        background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-        &::before {
+        background: linear-gradient(
+          to right,
+          hsl(210, 78%, 56%),
+          hsl(146, 68%, 55%)
+        );
+        &::after {
           -webkit-transform: translateX(-23px);
           -ms-transform: translateX(-23px);
           transform: translateX(-23px);
@@ -58,7 +63,7 @@
         background: linear-gradient(hsl(230, 22%, 74%), hsl(230, 22%, 74%));
         -webkit-transition: 0.4s;
         transition: 0.4s;
-        &::before {
+        &::after {
           position: absolute;
           content: "";
           height: 18px;
@@ -70,6 +75,26 @@
           -webkit-transition: 0.4s;
           transition: 0.4s;
         }
+        &::before {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 18px;
+
+          background: linear-gradient(
+            to right,
+            hsl(210, 78%, 56%),
+            hsl(146, 68%, 55%)
+          );
+          opacity: 0;
+          transition: all 0.14s ease-in-out;
+        }
+      }
+      .slider:hover:before {
+        opacity: 1;
       }
     }
   }

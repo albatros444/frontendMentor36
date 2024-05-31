@@ -12,7 +12,11 @@
     position: relative;
     border-radius: 6px;
     overflow: hidden;
+    cursor: pointer;
     background-color: var(--cardBgLight);
+    &:hover {
+      background-color: hsl(227, 47%, 93%);
+    }
     .topStripe {
       display: block;
       position: absolute;

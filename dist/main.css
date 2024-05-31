@@ -80,6 +80,7 @@ ul {
 }
 .topSection__toggleButton {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
 }
 .topSection__toggleButton p {
@@ -100,9 +101,9 @@ ul {
   height: 0;
 }
 .topSection__toggleButton .darkModebutton input:checked + .slider {
-  background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
-.topSection__toggleButton .darkModebutton input:checked + .slider::before {
+.topSection__toggleButton .darkModebutton input:checked + .slider::after {
   -webkit-transform: translateX(-23px);
   -ms-transform: translateX(-23px);
   transform: translateX(-23px);
@@ -120,7 +121,7 @@ ul {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-.topSection__toggleButton .darkModebutton .slider::before {
+.topSection__toggleButton .darkModebutton .slider::after {
   position: absolute;
   content: "";
   height: 18px;
@@ -131,6 +132,21 @@ ul {
   background-color: var(--cardBgLight);
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+.topSection__toggleButton .darkModebutton .slider::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 18px;
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  opacity: 0;
+  transition: all 0.14s ease-in-out;
+}
+.topSection__toggleButton .darkModebutton .slider:hover:before {
+  opacity: 1;
 }
 
 .topGrid {
@@ -148,7 +164,11 @@ ul {
   position: relative;
   border-radius: 6px;
   overflow: hidden;
+  cursor: pointer;
   background-color: var(--cardBgLight);
+}
+.topGrid .topGcard:hover {
+  background-color: hsl(227, 47%, 93%);
 }
 .topGrid .topGcard .topStripe {
   display: block;
@@ -233,7 +253,11 @@ ul {
   height: 125px;
   padding: 27px 32px 0 25px;
   border-radius: 4px;
-  background-color: hsl(227, 47%, 96%);
+  cursor: pointer;
+  background-color: var(--cardBgLight);
+}
+.bottomGrid .bottomGcard:hover {
+  background-color: hsl(227, 47%, 93%);
 }
 .bottomGrid .bottomGcard__top {
   display: flex;
@@ -429,12 +453,19 @@ ul {
 }
 .darkMode .background .topSection__toggleButton p {
   color: hsl(231, 12%, 58%);
+  transition: all 0.1s ease-in-out;
+}
+.darkMode .background .topSection__toggleButton .darkModebutton:hover ~ p {
+  color: white;
 }
 .darkMode .background .grids .overviewTitle {
   color: var(--textDark);
 }
 .darkMode .background .grids .topGrid .topGcard {
   background-color: var(--cardBgDark);
+}
+.darkMode .background .grids .topGrid .topGcard:hover {
+  background-color: hsl(228, 28%, 28%);
 }
 .darkMode .background .grids .topGrid .topGcard .nickName p {
   color: var(--grayTextDark);
@@ -447,6 +478,9 @@ ul {
 }
 .darkMode .background .grids .bottomGrid .bottomGcard {
   background-color: var(--cardBgDark);
+}
+.darkMode .background .grids .bottomGrid .bottomGcard:hover {
+  background-color: hsl(228, 28%, 28%);
 }
 .darkMode .background .grids .bottomGrid .bottomGcard__top p {
   color: var(--grayTextDark);

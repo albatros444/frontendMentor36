@@ -18,6 +18,10 @@
       &__toggleButton {
         p {
           color: hsl(231, 12%, 58%); ///custom
+          transition: all 0.1s ease-in-out;
+        }
+        .darkModebutton:hover ~ p {
+          color: white;
         }
       }
     }
@@ -28,6 +32,9 @@
       .topGrid {
         .topGcard {
           background-color: var(--cardBgDark);
+          &:hover {
+            background-color: hsl(228, 28%, 28%);
+          }
           .nickName {
             p {
               color: var(--grayTextDark);
@@ -46,6 +53,9 @@
       .bottomGrid {
         .bottomGcard {
           background-color: var(--cardBgDark);
+          &:hover {
+            background-color: hsl(228, 28%, 28%);
+          }
           &__top {
             p {
               color: var(--grayTextDark);
