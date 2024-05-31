@@ -3,7 +3,7 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 30px;
-  width: 1110px;
+  max-width: 1110px;
   margin: 0 auto;
   .bottomGcard {
     height: 125px;

@@ -59,11 +59,13 @@ ul {
 }
 
 .topSection {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1110px;
-  margin: 40px auto 50px;
+  max-width: 1110px;
+  margin: 0 auto 50px;
+  padding-top: 40px;
 }
 .topSection__title p {
   font-weight: 600;
@@ -71,6 +73,11 @@ ul {
 }
 .topSection__toggleButton {
   display: flex;
+  align-items: center;
+}
+.topSection__toggleButton p {
+  font-weight: 700;
+  color: hsl(231, 19%, 66%);
 }
 .topSection__toggleButton .button {
   position: relative;
@@ -121,7 +128,7 @@ ul {
 .topGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 1110px;
+  max-width: 1110px;
   margin: 30px auto;
   gap: 30px;
 }
@@ -205,7 +212,7 @@ ul {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 30px;
-  width: 1110px;
+  max-width: 1110px;
   margin: 0 auto;
 }
 .bottomGrid .bottomGcard {
@@ -270,10 +277,28 @@ ul {
 }
 
 .background {
+  position: relative;
   padding-bottom: 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.background:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 240px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  z-index: -50;
+  background-color: hsl(225, 100%, 98%);
+}
+.background .grids {
+  padding: 0 40px;
 }
 .background .overviewTitle {
-  width: 1110px;
+  max-width: 1110px;
   margin: 40px auto 20px;
   font-size: 25px;
   color: hsl(227, 9%, 44%);

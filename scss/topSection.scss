@@ -1,9 +1,12 @@
 .topSection {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1110px;
-  margin: 40px auto 50px;
+  max-width: 1110px;
+  margin: 0 auto 50px;
+  padding-top: 40px;
+
   &__title {
     p {
       font-weight: 600;
@@ -12,7 +15,10 @@
   }
   &__toggleButton {
     display: flex;
+    align-items: center;
     p {
+      font-weight: 700;
+      color: hsl(231, 19%, 66%); ///custom
     }
     .button {
       ////////button - label

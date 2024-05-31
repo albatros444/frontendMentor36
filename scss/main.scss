@@ -5,13 +5,31 @@
 @import "bottomGrid";
 
 .background {
+  position: relative;
   padding-bottom: 80px;
-  ///grid top
+  max-width: 1440px;
+  margin: 0 auto;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 240px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    z-index: -50;
+    background-color: hsl(225, 100%, 98%);
+  }
+  .grids {
+    padding: 0 40px;
+  }
+  ///grid top here
   .overviewTitle {
-    width: 1110px;
+    max-width: 1110px;
     margin: 40px auto 20px;
     font-size: 25px;
     color: hsl(227, 9%, 44%); //custom
   }
-  ////grid bottom
+  ////grid bottom here
 }
