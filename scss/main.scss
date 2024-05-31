@@ -6,6 +6,7 @@
 
 .background {
   position: relative;
+  height: 100%;
   padding-bottom: 80px;
   max-width: 1440px;
   margin: 0 auto;
@@ -23,13 +24,15 @@
   }
   .grids {
     padding: 0 40px;
+    ///grid top here
+    .overviewTitle {
+      max-width: 1110px;
+      margin: 40px auto 20px;
+      font-size: 25px;
+      color: hsl(227, 9%, 44%); //custom
+    }
+    ////grid bottom here
   }
-  ///grid top here
-  .overviewTitle {
-    max-width: 1110px;
-    margin: 40px auto 20px;
-    font-size: 25px;
-    color: hsl(227, 9%, 44%); //custom
-  }
-  ////grid bottom here
 }
+
+@import "mediaQs";

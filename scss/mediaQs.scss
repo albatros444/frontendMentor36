@@ -1,0 +1,61 @@
+@media screen and (max-width: 1000px) and (min-width: 601px) {
+  .background {
+    .topSection {
+      padding: 40px 10vw;
+    }
+    .grids {
+      padding: 0 10vw;
+      .topGrid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .bottomGrid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .background {
+    .topSection {
+      display: block;
+      padding: 40px 25px;
+      width: 100%;
+      max-width: 450px;
+      margin: 0 auto;
+
+      &__title {
+        border-bottom: 1px solid black;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        h1 {
+          font-size: 23px;
+        }
+      }
+      &__toggleButton {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+    .grids {
+      padding: 0 25px;
+      .topGrid {
+        display: flex;
+        flex-direction: column;
+        .topGcard {
+          width: 100%;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+      }
+      .bottomGrid {
+        display: flex;
+        flex-direction: column;
+        .bottomGcard {
+          width: 100%;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
