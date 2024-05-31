@@ -20,9 +20,8 @@
     width: 100%;
     top: 0;
     height: 240px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    // z-index: -50;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
     background-color: var(--topBgLight);
   }
   .grids {
@@ -30,8 +29,9 @@
     ///grid top here
     .overviewTitle {
       max-width: 1110px;
-      margin: 40px auto 20px;
-      font-size: 25px;
+      margin: 40px auto 25px;
+      font-size: 24px;
+      letter-spacing: 0.01em;
       color: var(--grayTextLight);
     }
     ////grid bottom here

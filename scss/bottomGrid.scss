@@ -2,26 +2,30 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 30px;
+  column-gap: 30px;
+  row-gap: 25px;
   max-width: 1110px;
   margin: 0 auto;
   .bottomGcard {
     height: 125px;
-    padding: 25px;
+    padding: 27px 32px 0 25px;
     border-radius: 4px;
     background-color: hsl(227, 47%, 96%);
     &__top {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       p {
         font-weight: 700;
         color: var(--grayTextLight);
+      }
+      img {
       }
     }
     &__bottom {
       display: flex;
       justify-content: space-between;
+      align-items: baseline;
       .changeToday {
         display: flex;
         align-items: baseline;
@@ -36,7 +40,7 @@
         }
       }
       .number {
-        font-size: 30px;
+        font-size: 32px;
         font-weight: 700;
         color: var(--textLight);
       }
@@ -78,6 +82,11 @@
       }
     }
     &:nth-child(5) {
+      .bottomGcard__top {
+        img {
+          padding: 1px;
+        }
+      }
       .bottomGcard__bottom {
         .changeToday {
           p {
@@ -87,6 +96,11 @@
       }
     }
     &:nth-child(6) {
+      .bottomGcard__top {
+        img {
+          padding: 1px;
+        }
+      }
       .bottomGcard__bottom {
         .changeToday {
           p {

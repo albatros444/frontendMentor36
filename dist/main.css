@@ -65,15 +65,17 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1190px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 35px;
 }
 .topSection__title h1 {
   color: var(--textLight);
+  margin-bottom: 3px;
 }
 .topSection__title p {
   font-weight: 600;
+  letter-spacing: 0.01em;
   color: var(--grayTextLight);
 }
 .topSection__toggleButton {
@@ -81,15 +83,16 @@ ul {
   align-items: center;
 }
 .topSection__toggleButton p {
+  padding-bottom: 2px;
   font-weight: 700;
-  color: hsl(231, 19%, 63%);
+  color: hsl(231, 13%, 60%);
 }
 .topSection__toggleButton .darkModebutton {
   position: relative;
   display: inline-block;
   width: 48px;
   height: 24px;
-  margin-left: 10px;
+  margin-left: 12px;
 }
 .topSection__toggleButton .darkModebutton input {
   opacity: 0;
@@ -100,9 +103,9 @@ ul {
   background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 .topSection__toggleButton .darkModebutton input:checked + .slider::before {
-  -webkit-transform: translateX(-24px);
-  -ms-transform: translateX(-24px);
-  transform: translateX(-24px);
+  -webkit-transform: translateX(-23px);
+  -ms-transform: translateX(-23px);
+  transform: translateX(-23px);
   background-color: hsl(228, 28%, 20%);
 }
 .topSection__toggleButton .darkModebutton .slider {
@@ -123,9 +126,9 @@ ul {
   height: 18px;
   width: 18px;
   border-radius: 18px;
-  right: 3px;
+  right: 4px;
   bottom: 3px;
-  background-color: white;
+  background-color: var(--cardBgLight);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -134,7 +137,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   max-width: 1110px;
-  margin: 30px auto;
+  margin: 10px auto 45px;
   gap: 30px;
 }
 .topGrid .topGcard {
@@ -143,7 +146,7 @@ ul {
   align-items: center;
   justify-content: center;
   position: relative;
-  border-radius: 4px;
+  border-radius: 6px;
   overflow: hidden;
   background-color: var(--cardBgLight);
 }
@@ -159,7 +162,7 @@ ul {
 .topGrid .topGcard .nickName {
   display: flex;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 31px;
   margin-bottom: 20px;
 }
 .topGrid .topGcard .nickName p {
@@ -174,6 +177,7 @@ ul {
 .topGrid .topGcard .followers p:nth-child(1) {
   font-size: 55px;
   font-weight: 700;
+  letter-spacing: -1px;
   color: var(--textLight);
 }
 .topGrid .topGcard .followers p:nth-child(2) {
@@ -186,7 +190,7 @@ ul {
 .topGrid .topGcard .changeToday {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .topGrid .topGcard .changeToday img {
   height: 4px;
@@ -206,6 +210,9 @@ ul {
 .topGrid .topGcard:nth-child(3) .topStripe {
   background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
 }
+.topGrid .topGcard:nth-child(3) .followers p:nth-child(1) {
+  padding-left: 18px;
+}
 .topGrid .topGcard:nth-child(4) .topStripe {
   background-color: hsl(348, 97%, 39%);
 }
@@ -217,20 +224,21 @@ ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 30px;
+  column-gap: 30px;
+  row-gap: 25px;
   max-width: 1110px;
   margin: 0 auto;
 }
 .bottomGrid .bottomGcard {
   height: 125px;
-  padding: 25px;
+  padding: 27px 32px 0 25px;
   border-radius: 4px;
   background-color: hsl(227, 47%, 96%);
 }
 .bottomGrid .bottomGcard__top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .bottomGrid .bottomGcard__top p {
   font-weight: 700;
@@ -239,6 +247,7 @@ ul {
 .bottomGrid .bottomGcard__bottom {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 .bottomGrid .bottomGcard__bottom .changeToday {
   display: flex;
@@ -254,7 +263,7 @@ ul {
   font-weight: 600;
 }
 .bottomGrid .bottomGcard__bottom .number {
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 700;
   color: var(--textLight);
 }
@@ -270,8 +279,14 @@ ul {
 .bottomGrid .bottomGcard:nth-child(4) .bottomGcard__bottom .changeToday p {
   color: hsl(163, 72%, 41%);
 }
+.bottomGrid .bottomGcard:nth-child(5) .bottomGcard__top img {
+  padding: 1px;
+}
 .bottomGrid .bottomGcard:nth-child(5) .bottomGcard__bottom .changeToday p {
   color: hsl(163, 72%, 41%);
+}
+.bottomGrid .bottomGcard:nth-child(6) .bottomGcard__top img {
+  padding: 1px;
 }
 .bottomGrid .bottomGcard:nth-child(6) .bottomGcard__bottom .changeToday p {
   color: hsl(163, 72%, 41%);
@@ -311,8 +326,8 @@ ul {
   width: 100%;
   top: 0;
   height: 240px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
   background-color: var(--topBgLight);
 }
 .background .grids {
@@ -320,8 +335,9 @@ ul {
 }
 .background .grids .overviewTitle {
   max-width: 1110px;
-  margin: 40px auto 20px;
-  font-size: 25px;
+  margin: 40px auto 25px;
+  font-size: 24px;
+  letter-spacing: 0.01em;
   color: var(--grayTextLight);
 }
 
@@ -340,24 +356,33 @@ ul {
   }
 }
 @media screen and (max-width: 600px) {
+  .darkMode .background .topSection__title {
+    border-bottom: 0.01em solid hsl(228, 21%, 29%);
+  }
+  .background {
+    padding-bottom: 40px;
+  }
   .background .topSection {
     display: block;
-    padding: 40px 25px;
+    padding: 35px 25px 30px;
     width: 100%;
     max-width: 450px;
-    margin: 0 auto;
+    margin: 0 auto 0px;
   }
   .background .topSection__title {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid hsl(228, 21%, 29%);
+    padding-bottom: 25px;
+    margin-bottom: 17px;
+    border-bottom: 0.01em solid hsl(227, 13%, 59%);
   }
   .background .topSection__title h1 {
-    font-size: 23px;
+    font-size: 24px;
   }
   .background .topSection__toggleButton {
     width: 100%;
     justify-content: space-between;
+  }
+  .background .topSection__toggleButton p {
+    color: hsl(231, 13%, 49%);
   }
   .background .grids {
     padding: 0 25px;
@@ -369,6 +394,7 @@ ul {
   .background .grids .topGrid {
     display: flex;
     flex-direction: column;
+    gap: 25px;
   }
   .background .grids .topGrid .topGcard {
     width: 100%;
@@ -378,6 +404,7 @@ ul {
   .background .grids .bottomGrid {
     display: flex;
     flex-direction: column;
+    gap: 17px;
   }
   .background .grids .bottomGrid .bottomGcard {
     width: 100%;
@@ -399,6 +426,9 @@ ul {
 }
 .darkMode .background .topSection__title p {
   color: var(--grayTextDark);
+}
+.darkMode .background .topSection__toggleButton p {
+  color: hsl(231, 12%, 58%);
 }
 .darkMode .background .grids .overviewTitle {
   color: var(--textDark);

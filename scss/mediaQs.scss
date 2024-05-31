@@ -16,25 +16,40 @@
 }
 
 @media screen and (max-width: 600px) {
+  /////border appear only in mobile layout
+  .darkMode {
+    .background {
+      .topSection {
+        &__title {
+          border-bottom: 0.01em solid hsl(228, 21%, 29%);
+        }
+      }
+    }
+  }
+
+  ////////////
   .background {
+    padding-bottom: 40px;
     .topSection {
       display: block;
-      padding: 40px 25px;
+      padding: 35px 25px 30px;
       width: 100%;
       max-width: 450px;
-      margin: 0 auto;
-
+      margin: 0 auto 0px;
       &__title {
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid hsl(228, 21%, 29%);
+        padding-bottom: 25px;
+        margin-bottom: 17px;
+        border-bottom: 0.01em solid hsl(227, 13%, 59%);
         h1 {
-          font-size: 23px;
+          font-size: 24px;
         }
       }
       &__toggleButton {
         width: 100%;
         justify-content: space-between;
+        p {
+          color: hsl(231, 13%, 49%); ///custom
+        }
       }
     }
     .grids {
@@ -46,6 +61,7 @@
       .topGrid {
         display: flex;
         flex-direction: column;
+        gap: 25px;
         .topGcard {
           width: 100%;
           max-width: 400px;
@@ -55,6 +71,7 @@
       .bottomGrid {
         display: flex;
         flex-direction: column;
+        gap: 17px;
         .bottomGcard {
           width: 100%;
           max-width: 400px;
