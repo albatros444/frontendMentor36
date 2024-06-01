@@ -11,6 +11,8 @@
     padding: 27px 32px 0 25px;
     border-radius: 4px;
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
     background-color: var(--cardBgLight);
     &:hover {
       background-color: hsl(227, 47%, 93%);
